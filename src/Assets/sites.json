@@ -1,0 +1,117 @@
+{
+  "sites": [
+      {
+          "id": 1,
+          "siteTitle": "Mon CV en ligne",
+          "imageName": "cvScreen",
+          "description": "Le traditionnel Curriculum Vitae, sous la forme d'un site statique responsif et imprimable.",
+          "siteLink": "https://cv.codeninja.fr",
+          "shownLink": "cv.codeninja.fr",
+          "stack": [
+              "HTML5",
+              "CSS3"
+          ]
+      },
+      {
+          "id": 2,
+          "siteTitle": "Donjons & Morues",
+          "imageName": "donjonScreen",
+          "description": "Un site pour ma table de D&D avec une shoutbox, les fiches des personnages et des aides de jeu.",
+          "siteLink": "https://donjon.codeninja.fr",
+          "shownLink": "donjon.codeninja.fr",
+          "stack": [
+              "HTML5",
+              "CSS3",
+              "PHP",
+              "PDO",
+              "MariaDB"
+          ]
+      },
+      {
+          "id": 3,
+          "siteTitle": "Le Club d'aïkido de Romilly-sur-Seine",
+          "imageName": "aikidoScreen",
+          "description": "Une site vitrine statique pour mon club d'aikido, que j'ai développé dans le cadre de ma formation.",
+          "siteLink": "https://aikido.codeninja.fr",
+          "shownLink": "aikido.codeninja.fr",
+          "stack": [
+              "HTML5",
+              "CSS3",
+              "Bootstrap"
+          ]
+      },
+      {
+          "id": 4,
+          "siteTitle": "Un jeu de dés",
+          "imageName": "diceScreen",
+          "description": "Un jeu de dé fonctionnel réalisé lors de ma formation.",
+          "siteLink": "https://dice.codeninja.fr",
+          "shownLink": "dice.codeninja.fr",
+          "stack": [
+              "HTML5",
+              "CSS3",
+              "Bulma",
+              "JavaScript"
+          ]
+      },
+      {
+          "id": 5,
+          "siteTitle": "Goyave Voyage",
+          "imageName": "goyaveScreen",
+          "description": "Pour être évalué sur Wordpress, j'ai réalisé ce site pour une agence de voyage fictive.",
+          "siteLink": "https://travel.codeninja.fr",
+          "shownLink": "travel.codeninja.fr",
+          "stack": [
+              "Wordpress",
+              "CSS3",
+              "MariaDB"
+          ]
+      },
+      {
+          "id": 6,
+          "siteTitle": "Un site d'espionnage",
+          "imageName": "spyScreen",
+          "description": "Un site d'espionnage permettant de visualiser et de planifier des missions à l'étranger. Réalisé pour évaluer mes compétences back-end, je me suis imposé le défi de n'utiliser aucun framework. J'ai trouvé amusant de faire un designe rétro rappelant nos vieux moniteurs CRT.",
+          "siteLink": "https://spy-site.codeninja.fr",
+          "shownLink": "spy-site.codeninja.fr",
+          "stack": [
+              "HTML5",
+              "CSS3",
+              "PHP",
+              "PDO",
+              "MariaDB"
+          ]
+      },
+      {
+          "id": 7,
+          "siteTitle": "Le Quai Antique",
+          "imageName": "quaiAntiqueScreen",
+          "description": "Un site vitrine pour un restaurant savoyard fictif, avec un système de réservation et une gestion de contenu gérée en back-office. Réalisé dans le cadre de mon évaluation finale, c'est le projet que j'ai présenté au jury pour passer le titre professionnel.",
+          "siteLink": "https://quai-antique.codeninja.fr",
+          "shownLink": "quai-antique.codeninja.fr",
+          "stack": [
+              "Twig",
+              "Bootstrap",
+              "SCSS",
+              "CSS3",
+              "JavaScript",
+              "Symfony",
+              "Doctrine",
+              "MariaDB"
+          ]
+      },
+      {
+        "id": 8,
+        "siteTitle": "Le site que vous êtes entrain de consulter",
+        "imageName": "folioScreen",
+        "description": "Un portfolio couplé à un blog sur le développement, avec un système de gestion de contenu.",
+        "siteLink": "#",
+        "shownLink": "www.codeninja.fr",
+        "stack": [
+            "React",
+            "Tailwind",
+            "Firebase"
+        ]
+      }
+  ]
+}
