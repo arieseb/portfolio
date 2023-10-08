@@ -1,26 +1,27 @@
-import logo from '../logo.svg';
 import '../App.css';
+import jsonData from '../Assets/sites.json';
 import PageTitle from '../Components/PageTitle';
+import SiteCard from '../Components/SiteCard';
 
 function Portfolio() {
+  const data = jsonData.sites;
+
   return (
-    <div className="App">
-      <header className="App-header">
+    <main>
         <PageTitle title="Bienvenue sur mon portfolio"/>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        {data.map(site => (
+          <div key={site.id}>
+            <SiteCard
+              siteTitle={site.siteTitle}
+              imageName={site.imageName}
+              description={site.description}
+              siteLink={site.siteLink}
+              shownLink={site.shownLink}
+              stack={site.stack}
+            />
+          </div>
+        ))}
+    </main>
   );
 }
 

@@ -7,11 +7,13 @@ import Menu from './Components/Menu';
 function App() {
   return (
     <div>
-      <Menu />
+      <header>
+        <Menu />
+      </header>
       <Routes>
-        <Route path="/" element={<Portfolio/>}/>
-        <Route path="/blog" element={<Blog/>}/>
-      </Routes>
+          <Route path="/" element={<Portfolio />}/>
+          <Route path="/blog" element={<Blog />}/>
+        </Routes>
     </div>
   );
 }
