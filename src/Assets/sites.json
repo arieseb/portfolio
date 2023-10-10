@@ -58,11 +58,12 @@
           "id": 5,
           "siteTitle": "Goyave Voyage",
           "imageName": "goyaveScreen",
-          "description": "Pour être évalué sur Wordpress, j'ai réalisé ce site pour une agence de voyage fictive.",
+          "description": "Pour être évalué sur Wordpress, j'ai réalisé ce site bilingue pour une agence de voyage fictive.",
           "siteLink": "https://travel.codeninja.fr",
           "shownLink": "travel.codeninja.fr",
           "stack": [
               "Wordpress",
+              "Gutenberg",
               "CSS3",
               "MariaDB"
           ]
@@ -109,8 +110,9 @@
         "shownLink": "www.codeninja.fr",
         "stack": [
             "React",
-            "Tailwind",
-            "Firebase"
+            "Markdown",
+            "Firebase",
+            "MariaDB"
         ]
       }
   ]
