@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
 import PageTitle from '../Components/PageTitle';
 import LoggedIn from '../Components/LoggedIn';
+import CreateForm from '../Components/CreateForm';
+import UpdateForm from '../Components/UpdateForm';
+import DeleteForm from '../Components/DeleteForm';
 
 function Admin() {
   const [user, loading] = useAuthState(auth);
@@ -18,10 +21,13 @@ function Admin() {
   return (
     <>
       <div>
-        <LoggedIn></LoggedIn>
+        <LoggedIn />
       </div>
       <main>
         <PageTitle title="Panneau d'administration"/>
+        <CreateForm />
+        <UpdateForm />
+        <DeleteForm />
       </main>
     </>
   );

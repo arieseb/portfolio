@@ -22,6 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# firebase & db config
+# firebase
 /src/firebase.js
-/src/db.js
+
+# articles
+/public/Articles/

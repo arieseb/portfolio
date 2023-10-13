@@ -31,6 +31,7 @@ function Blog() {
               <h3>{item.title}</h3>
               <p>{item.tag}</p>
               <MarkdownViewer fileName={item.filename} /> 
+              <p>{item.date}</p>
             </article>
           );
         })}        
