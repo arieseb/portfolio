@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import PageTitle from '../Components/PageTitle';
-import LoggedIn from '../Components/LoggedIn';
 import MarkdownViewer from '../Components/MarkdownViewer';
 import axios from 'axios';
 
@@ -23,9 +22,6 @@ function Blog() {
 
   return (
     <>
-      <div>
-        <LoggedIn></LoggedIn>
-      </div>
       <main>
         <PageTitle title="Bienvenue sur mon blog"/>
         {articles.map(item => {

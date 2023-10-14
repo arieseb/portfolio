@@ -103,7 +103,7 @@
       },
       {
         "id": 8,
-        "siteTitle": "Le site que vous êtes entrain de consulter",
+        "siteTitle": "Ce site !",
         "imageName": "folioScreen",
         "description": "Un portfolio couplé à un blog sur le développement, avec un système de gestion de contenu.",
         "siteLink": "#",
@@ -111,6 +111,8 @@
         "stack": [
             "React",
             "Markdown",
+            "TailwindCSS",
+            "daisyUI",
             "Firebase",
             "Express",
             "MariaDB"

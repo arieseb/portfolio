@@ -17,13 +17,15 @@ export default function Login(){
 
     return (
       <div>
-          <input type="text" value={email} placeholder="adresse mail"
+          <input type="text" value={email} placeholder="E-mail"
+            className="input input-bordered input-sm w-full max-w-xs rounded-xl"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <input type="password" value={password} placeholder="mot de passe"
+          <input type="password" value={password} placeholder="Mot de passe"
+            className="input input-bordered input-sm w-full max-w-xs mt-2 rounded-xl"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={() => logIn(email, password)}>
+          <button onClick={() => logIn(email, password)} className="btn btn-neutral-focus btn-sm ms-2 rounded-xl normal-case">
             Connexion
           </button>
       </div>

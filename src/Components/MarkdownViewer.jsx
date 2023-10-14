@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 class MarkdownViewer extends React.Component {
   constructor(props) {
@@ -36,7 +36,7 @@ class MarkdownViewer extends React.Component {
       const match = /language-(\w+)/.exec(className || '');
       return !inline && match ? (
         <SyntaxHighlighter
-          style={dracula}
+          style={okaidia}
           language={match[1]}
           PreTag="div"
           {...props}

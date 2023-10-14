@@ -1,6 +1,8 @@
 const PageTitle = ({ title }) => {
   return (
-    <h1>{title}</h1>
+    <span className="flex flex-col items-center my-4">
+      <h1 className="text-3xl">{title}</h1>
+    </span>
   );
 }
 

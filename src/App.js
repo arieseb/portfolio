@@ -3,6 +3,7 @@ import Portfolio from './Screens/Portfolio';
 import Blog from './Screens/Blog';
 import Menu from './Components/Menu';
 import Admin from './Screens/Admin';
+import About from './Screens/About';
 
 function App() {
   return (
@@ -11,9 +12,10 @@ function App() {
         <Menu />
       </header>
       <Routes>
-          <Route path="/" element={<Portfolio />}/>
-          <Route path="/blog" element={<Blog />}/>
+          <Route path="/" element={<Blog />}/>  
+          <Route path="/portfolio" element={<Portfolio />}/>
           <Route path="/admin" element={<Admin />}/>
+          <Route path="/about" element={<About />}/>
         </Routes>
     </div>
   );
