@@ -8,14 +8,17 @@ import axios from 'axios';
 function Blog() {
   const [articles, setArticles] = useState([]);
 
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('http://localhost:3355/data');
+      setArticles(response.data);
+    } catch (error) {
+      console.error('Erreur lors de la récupération des articles', error);
+    }
+  };
+
   useEffect(() => {
-    axios.get('http://localhost:3355/data')
-      .then(response => {
-        setArticles(response.data);
-      })
-      .catch(error => {
-        console.error('Erreur lors de la récupération des articles', error);
-      });
+    fetchData();
   }, []);
 
   return (

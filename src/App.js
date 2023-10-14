@@ -1,4 +1,3 @@
-import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Portfolio from './Screens/Portfolio';
 import Blog from './Screens/Blog';

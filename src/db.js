@@ -47,6 +47,14 @@ app.get('/data', (req, res) => {
 // Endpoint POST pour créer un nouveau billet
 app.post('/create', (req, res) => {
   const form = new formidable.IncomingForm({ uploadDir: '../public/Articles/', keepExtensions: true });
+  const date = new Date(Date.now());
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const hour = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  const seconds = String(date.getSeconds()).padStart(2, '0');
+  const formattedDate = `${year}-${month}-${day} ${hour}:${minutes}:${seconds}`;
   let  fileName = '';
 
   form.on('file', (field, file) => {
@@ -60,12 +68,10 @@ app.post('/create', (req, res) => {
       res.status(500).json({ error: 'Erreur lors de l\'analyse du formulaire' });
       return;
     }
-    console.log(fields);
-    console.log(files);
 
     // Inscription en base de données
     const createQuery = 'INSERT INTO article (title, tag, filename, date) VALUES (?, ?, ?, ?)';
-    db.query(createQuery, [fields.title, fields.tag, fileName, Date.now()], (error, results) => {
+    db.query(createQuery, [fields.title, fields.tag, fileName, formattedDate], (error, results) => {
       if (error) {
         console.error('Erreur lors de la requête CREATE : ', error.message);
         res.status(500).json({ error: 'Erreur lors de la requête CREATE' });
@@ -75,12 +81,93 @@ app.post('/create', (req, res) => {
     });
 
     // Copie du fichier .md
-    const uploadPath = form.uploadDir + files.file.originalFilename;
-    fs.copyFile(`${files.file.filepath}`, uploadPath, (error) => {
+    const uploadPath = form.uploadDir + '//' + files.file.originalFilename;
+    fs.copyFile(`${files.file.filepath}`, uploadPath, (error) => {      
       if (error) {
-        //console.error('Erreur lors de la copie du fichier : ', error);
+      //console.error('Erreur lors de la copie du fichier : ', error);
       } else {
         console.log('Fichier copié avec succès');
+    }});
+  });
+});
+
+//Endpoint POST pour modifier un billet
+app.post('/update', (req, res) => {
+  const form = new formidable.IncomingForm({ uploadDir: '../public/Articles/', keepExtensions: true });
+  let  fileName = '';
+
+  form.on('file', (field, file) => {
+    file.filepath = `${form.uploadDir}`;
+    fileName = file.newFilename;
+  });
+
+  form.parse(req, (err, fields, files) => {
+    if (err) {
+      console.error('Erreur lors de l\'analyse du formulaire : ', err);
+      res.status(500).json({ error: 'Erreur lors de l\'analyse du formulaire' });
+      return;
+    }
+
+    // Inscription en base de données
+    const createQuery = 'UPDATE article SET title = ?, tag = ?, filename = ? WHERE id = ?';
+    db.query(createQuery, [fields.title, fields.tag, fileName, fields.idToUpdate], (error, results) => {
+      if (error) {
+        console.error('Erreur lors de la requête UPDATE : ', error.message);
+        res.status(500).json({ error: 'Erreur lors de la requête UPDATE' });
+      } else {
+        res.status(200).json(results);
+      }
+    });
+
+    // Copie du fichier .md
+    const uploadPath = form.uploadDir + files.file.originalFilename;
+    fs.copyFile(`${files.file.filepath}`, uploadPath, (error) => {      if (error) {
+      //console.error('Erreur lors de la copie du fichier : ', error);
+    } else {
+      console.log('Fichier copié avec succès');
+    }});
+
+    // Suppression de l'ancien fichier
+    const fileToDeletePath = form.uploadDir + '/' + fields.oldFileName;
+    fs.unlink(fileToDeletePath, (error) => {
+      if (error) {
+        console.error('Erreur lors de la suppression du fichier : ', error);
+      } else {
+        console.log('Fichier supprimé avec succès');
+      }
+    });
+  });
+});
+
+//Endpoint POST pour supprimer un billet
+app.post('/delete', (req, res) => {
+  const form = new formidable.IncomingForm({ uploadDir: '../public/Articles/', keepExtensions: true });
+
+  form.parse(req, (err, fields, files) => {
+    if (err) {
+      console.error('Erreur lors de l\'analyse du formulaire : ', err);
+      res.status(500).json({ error: 'Erreur lors de l\'analyse du formulaire' });
+      return;
+    }
+
+    // Inscription en base de données
+    const createQuery = 'DELETE FROM article WHERE id = ?';
+    db.query(createQuery, [fields.idToDelete], (error, results) => {
+      if (error) {
+        console.error('Erreur lors de la requête UPDATE : ', error.message);
+        res.status(500).json({ error: 'Erreur lors de la requête UPDATE' });
+      } else {
+        res.status(200).json(results);
+      }
+    });
+
+    // Suppression de l'ancien fichier
+    const fileToDeletePath = form.uploadDir + '/' + fields.oldFileName;
+    fs.unlink(fileToDeletePath, (error) => {
+      if (error) {
+        console.error('Erreur lors de la suppression du fichier : ', error);
+      } else {
+        console.log('Fichier supprimé avec succès');
       }
     });
   });

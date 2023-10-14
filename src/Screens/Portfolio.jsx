@@ -1,4 +1,3 @@
-import '../App.css';
 import jsonData from '../Assets/sites.json';
 import PageTitle from '../Components/PageTitle';
 import SiteCard from '../Components/SiteCard';
@@ -7,7 +6,7 @@ function Portfolio() {
   const data = jsonData.sites;
 
   return (
-    <main>
+    <main class="b">
         <PageTitle title="Bienvenue sur mon portfolio"/>
         {data.map(site => (
           <div key={site.id}>
