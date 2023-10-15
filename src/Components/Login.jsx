@@ -17,15 +17,15 @@ export default function Login(){
 
     return (
       <div>
-          <input type="text" value={email} placeholder="E-mail"
+          <input type="text" value={email} placeholder="E-mail" id="email" name="email" autoComplete="email"
             className="input input-bordered input-sm w-full max-w-xs rounded-xl"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <input type="password" value={password} placeholder="Mot de passe"
+          <input type="password" value={password} placeholder="Mot de passe" id="password" name="password" autoComplete="current-password"
             className="input input-bordered input-sm w-full max-w-xs mt-2 rounded-xl"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={() => logIn(email, password)} className="btn btn-neutral-focus btn-sm ms-2 rounded-xl normal-case">
+          <button onClick={() => logIn(email, password)} className="btn btn-neutral-focus btn-sm 2xl:ms-2 sm:max-2xl:mt-2 rounded-xl normal-case">
             Connexion
           </button>
       </div>

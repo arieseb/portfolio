@@ -73,25 +73,26 @@ const UpdateForm = () => {
   };
 
   return(
-    <>
-      <h2>Modifier un billet : </h2>
-      <form encType='multipart/form-data' onSubmit={handleSubmit}>
-        <label htmlFor="update-select">Billet à modifier : </label>
-        <select name="update-select" id="update-select" onChange={handleSelectChange}>
+    <div className='bg-stone-700 p-6 rounded-xl mt-2'>
+      <h2 className='text-xl font-bold mb-2'>Modifier un billet : </h2>
+      <form encType='multipart/form-data' onSubmit={handleSubmit} className='flex flex-col min-w-min lg:w-96 items-center'>
+        <label htmlFor="update-select" className='hidden'>Billet à modifier</label>
+        <select name="update-select" id="update-select" onChange={handleSelectChange} defaultValue='' className="select select-bordered w-full rounded-xl">
+          <option value='' disabled>Billet à modifier</option>
           {articles.map(item => {
             return(<option key={item.id} value={item.filename}>{item.title}</option>);
           })}
         </select>
-        <label htmlFor='new-title'>Titre : </label>
-        <input type='text' name='newTitle' id='newTitle' onChange={handleInputChange} required></input>
-        <label htmlFor='new-tag'>Tag : </label>
-        <input type='text' name='newTag' id='newTag' onChange={handleInputChange} required></input>
-        <a id='download-link' href={downloadLink} download>Télécharger l'article existant</a>
-        <label htmlFor='newFile'>Fichier modifié : </label>
-        <input type='file' name='newFile' id='newFile' onChange={handleInputChange} required></input>
-        <button type="submit">Valider</button>
+        <label htmlFor='newTitle' className='hidden'>Titre</label>
+        <input type='text' name='newTitle' id='newTitle' onChange={handleInputChange}  placeholder='Titre' required className="input input-bordered input-sm mt-2 rounded-xl w-full"></input>
+        <label htmlFor='newTag' className='hidden'>Tag</label>
+        <input type='text' name='newTag' id='newTag' onChange={handleInputChange}  placeholder='Tag' required className="input input-bordered input-sm mt-2 rounded-xl w-full"></input>
+        <a id='download-link' href={downloadLink} download className="btn btn-neutral-focus my-4 rounded-xl normal-case w-2/3">Télécharger l'article existant</a>
+        <label htmlFor='newFile' className='hidden'>Fichier modifié</label>
+        <input type='file' name='newFile' id='newFile' onChange={handleInputChange} required className="file-input file-input-bordered mt-2 rounded-xl"></input>
+        <button type="submit" className="btn btn-neutral-focus mt-4 rounded-xl normal-case w-1/2">Valider</button>
       </form>
-    </>
+    </div>
   );
 };
 

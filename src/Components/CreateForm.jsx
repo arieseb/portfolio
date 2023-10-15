@@ -33,18 +33,18 @@ const CreateForm = () => {
   }
 
   return (
-    <>
-      <h2>Poster un nouveau billet :</h2>
-      <form encType='multipart/form-data' onSubmit={handleSubmit}>
-        <label htmlFor='title'>Titre : </label>
-        <input type='text' name='title' id='title' onChange={handleInputChange} required></input>
-        <label htmlFor='tag'>Tag : </label>
-        <input type='text' name='tag' id='tag' onChange={handleInputChange} required></input>
-        <label htmlFor='file'>Fichier Markdown : </label>
-        <input type='file' name='file' id='file' onChange={handleInputChange} required></input>
-        <button type="submit">Valider</button>
+    <div className='bg-stone-700 p-6 rounded-xl'>
+      <h2 className='text-xl font-bold mb-2'>Poster un nouveau billet :</h2>
+      <form encType='multipart/form-data' onSubmit={handleSubmit} className='flex flex-col min-w-min lg:w-96 items-center'>
+        <label htmlFor='title' className='hidden'>Titre</label>
+        <input type='text' name='title' id='title' onChange={handleInputChange} placeholder='Titre' required className="input input-bordered input-sm mt-2 rounded-xl w-full"></input>
+        <label htmlFor='tag' className='hidden'>Tag</label>
+        <input type='text' name='tag' id='tag' onChange={handleInputChange} placeholder='Tag' required className="input input-bordered input-sm mt-2 rounded-xl w-full"></input>
+        <label htmlFor='file' className='hidden'>Fichier Markdown</label>
+        <input type='file' name='file' id='file' onChange={handleInputChange} required className="file-input file-input-bordered mt-2 rounded-xl"></input>
+        <button type="submit" className="btn btn-neutral-focus mt-4 rounded-xl normal-case w-1/2">Valider</button>
       </form>
-    </>
+    </div>
   );
 };
 

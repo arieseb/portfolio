@@ -21,9 +21,13 @@ function Admin() {
     <>
       <main>
         <PageTitle title="Panneau d'administration"/>
-        <CreateForm />
-        <UpdateForm />
-        <DeleteForm />
+        <div className='flex justify-center mt-8'>
+          <section className='flex flex-col flex-wrap 2xl:flex-row justify-center items-center gap-3 bg-stone-800 py-10 w-10/12 rounded-2xl'>
+            <CreateForm />
+            <UpdateForm />
+            <DeleteForm />
+          </section>
+        </div>
       </main>
     </>
   );

@@ -4,7 +4,7 @@
           "id": 1,
           "siteTitle": "Mon CV en ligne",
           "imageName": "cvScreen",
-          "description": "Le traditionnel Curriculum Vitae, sous la forme d'un site statique responsif et imprimable.",
+          "description": "Le traditionnel Curriculum Vitae, sous la forme d'un site statique responsif et imprimable. Il est pensé pour être toujours à jour et pour faciliter la vie des recruteurs, donc potentiellement la vôtre !",
           "siteLink": "https://cv.codeninja.fr",
           "shownLink": "cv.codeninja.fr",
           "stack": [
@@ -16,7 +16,7 @@
           "id": 2,
           "siteTitle": "Donjons & Morues",
           "imageName": "donjonScreen",
-          "description": "Un site pour ma table de D&D avec une shoutbox, les fiches des personnages et des aides de jeu.",
+          "description": "Un site pour ma table de D&D avec une shoutbox, les fiches des personnages et des aides de jeu. Développé avant ma formation, il a permis de me familiariser avec différents langages et concepts.",
           "siteLink": "https://donjon.codeninja.fr",
           "shownLink": "donjon.codeninja.fr",
           "stack": [
@@ -31,7 +31,7 @@
           "id": 3,
           "siteTitle": "Le Club d'aïkido de Romilly-sur-Seine",
           "imageName": "aikidoScreen",
-          "description": "Une site vitrine statique pour mon club d'aikido, que j'ai développé dans le cadre de ma formation.",
+          "description": "Une site vitrine statique pour mon club d'aikido, que j'ai développé dans le cadre de ma formation pour être évalué sur le développement front-end.",
           "siteLink": "https://aikido.codeninja.fr",
           "shownLink": "aikido.codeninja.fr",
           "stack": [
@@ -42,23 +42,23 @@
       },
       {
           "id": 4,
-          "siteTitle": "Un jeu de dés",
+          "siteTitle": "Duel Dice Game",
           "imageName": "diceScreen",
-          "description": "Un jeu de dé fonctionnel réalisé lors de ma formation.",
+          "description": "Un jeu de dé fonctionnel réalisé lors de ma formation. Il est intégralement développé avec des classes JavaScript et est intégré au DOM.",
           "siteLink": "https://dice.codeninja.fr",
           "shownLink": "dice.codeninja.fr",
           "stack": [
               "HTML5",
               "CSS3",
-              "Bulma",
-              "JavaScript"
+              "JavaScript",
+              "Bulma"
           ]
       },
       {
           "id": 5,
           "siteTitle": "Goyave Voyage",
           "imageName": "goyaveScreen",
-          "description": "Pour être évalué sur Wordpress, j'ai réalisé ce site bilingue pour une agence de voyage fictive.",
+          "description": "Pour être évalué sur Wordpress, j'ai réalisé ce site bilingue pour une agence de voyage fictive. J'ai utilisé un thème que j'ai modifié, différents plugins et Gutenberg pour construire ce site.",
           "siteLink": "https://travel.codeninja.fr",
           "shownLink": "travel.codeninja.fr",
           "stack": [
@@ -72,7 +72,7 @@
           "id": 6,
           "siteTitle": "Un site d'espionnage",
           "imageName": "spyScreen",
-          "description": "Un site d'espionnage permettant de visualiser et de planifier des missions à l'étranger. Réalisé pour évaluer mes compétences back-end, je me suis imposé le défi de n'utiliser aucun framework. J'ai trouvé amusant de faire un designe rétro rappelant nos vieux moniteurs CRT.",
+          "description": "Un site d'espionnage permettant de visualiser et de planifier des missions à l'étranger. Réalisé pour évaluer mes compétences back-end, je me suis imposé le défi de n'utiliser aucun framework. J'ai trouvé amusant de faire un design rétro rappelant nos vieux moniteurs CRT.",
           "siteLink": "https://spy-site.codeninja.fr",
           "shownLink": "spy-site.codeninja.fr",
           "stack": [
@@ -91,12 +91,13 @@
           "siteLink": "https://quai-antique.codeninja.fr",
           "shownLink": "quai-antique.codeninja.fr",
           "stack": [
+              "Symfony",
               "Twig",
               "Bootstrap",
               "SCSS",
               "CSS3",
               "JavaScript",
-              "Symfony",
+              "AJAX",
               "Doctrine",
               "MariaDB"
           ]
@@ -105,7 +106,7 @@
         "id": 8,
         "siteTitle": "Ce site !",
         "imageName": "folioScreen",
-        "description": "Un portfolio couplé à un blog sur le développement, avec un système de gestion de contenu.",
+        "description": "Un blog sur le développement couplé à un portfolio, avec un système de gestion de contenu. Les sites présentés sont issus d'un fichier JSON qui sert d'API locale et les articles sont uploadés sous la forme de fichiers Markdown.",
         "siteLink": "#",
         "shownLink": "www.codeninja.fr",
         "stack": [
