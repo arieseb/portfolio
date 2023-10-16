@@ -7,6 +7,7 @@ const CreateForm = () => {
     tag: '',
     file: null,
   });
+  const [confirmation, setConfirmation] = useState('');
 
   const handleInputChange = (event) => {
     const { name, value, type } = event.target;
@@ -26,6 +27,7 @@ const CreateForm = () => {
 
     try {
       const response = await axios.post('http://localhost:3355/create', data);
+      setConfirmation('Le billet a bien été créé.')
       console.log('Réponse du serveur : ', response.data);
     } catch (error) {
       console.error('Erreur lors de la soumission du formulaire : ', error);
@@ -44,6 +46,12 @@ const CreateForm = () => {
         <input type='file' name='file' id='file' onChange={handleInputChange} required className="file-input file-input-bordered mt-2 rounded-xl"></input>
         <button type="submit" className="btn btn-neutral-focus mt-4 rounded-xl normal-case w-1/2">Valider</button>
       </form>
+        { confirmation ?
+          <div className='bg-green-400 rounded-xl p-2 mt-2 flex justify-center'>
+            <p className=' text-green-800 font-semibold'>{confirmation}</p>
+          </div> :
+          null
+        }
     </div>
   );
 };

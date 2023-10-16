@@ -7,6 +7,7 @@ const UpdateForm = () => {
   const [selectedId, setSelectedId] = useState(1);
   const [filenameToIdMap, setFilenameToIdMap] = useState({});
   const [downloadLink, setDownloadLink] = useState('#')
+  const [confirmation, setConfirmation] = useState('');
   const [formData, setFormData] = useState({
     title: '',
     tag: '',
@@ -42,6 +43,7 @@ const UpdateForm = () => {
 
     try {
       const response = await axios.post('http://localhost:3355/update', data);
+      setConfirmation('Le billet a bien été modifié.')
       console.log('Réponse du serveur : ', response.data);
       fetchData();
     } catch (error) {
@@ -92,6 +94,12 @@ const UpdateForm = () => {
         <input type='file' name='newFile' id='newFile' onChange={handleInputChange} required className="file-input file-input-bordered mt-2 rounded-xl"></input>
         <button type="submit" className="btn btn-neutral-focus mt-4 rounded-xl normal-case w-1/2">Valider</button>
       </form>
+      { confirmation ?
+          <div className='bg-green-400 rounded-xl p-2 mt-2 flex justify-center'>
+            <p className=' text-green-800 font-semibold'>{confirmation}</p>
+          </div> :
+          null
+        }
     </div>
   );
 };

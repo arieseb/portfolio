@@ -16,7 +16,7 @@
           "id": 2,
           "siteTitle": "Donjons & Morues",
           "imageName": "donjonScreen",
-          "description": "Un site pour ma table de D&D avec une shoutbox, les fiches des personnages et des aides de jeu. Développé avant ma formation, il a permis de me familiariser avec différents langages et concepts.",
+          "description": "Un site pour ma table de D&D avec une shoutbox, les fiches des personnages et des aides de jeu. Développé avant ma formation, il m'a permis de me familiariser avec différents langages et concepts.",
           "siteLink": "https://donjon.codeninja.fr",
           "shownLink": "donjon.codeninja.fr",
           "stack": [

@@ -32,8 +32,24 @@ db.connect((error) => {
   console.log('Connecté à la base de données');
 });
 
-// Endpoint GET pour récupérer des données
+// Endpoint GET pour récupérer les articles avec pagination
 app.get('/data', (req, res) => {
+  const page = req.query.page || 1;
+  const limit = parseInt(req.query.limit) ||3;
+  const offset = (page - 1) * limit;
+  const query = 'SELECT * FROM article LIMIT ? OFFSET ?';
+  db.query(query, [limit, offset], (error, results) => {
+    if (error) {
+      console.error('Erreur lors de la requête SELECT : ', error.message);
+      res.status(500).json({ error: 'Erreur lors de la requête SELECT.' });
+    } else {
+      res.status(200).json(results);
+    }
+  });
+});
+
+// Endpoint GET pour récupérer les tags
+app.get('/tags', (req, res) => {
   db.query('SELECT * FROM article', (error, results) => {
     if (error) {
       console.error('Erreur lors de la requête SELECT : ', error.message);

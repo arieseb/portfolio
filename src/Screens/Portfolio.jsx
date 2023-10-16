@@ -8,7 +8,7 @@ function Portfolio() {
   return (
     <main>
         <PageTitle title="Bienvenue sur mon portfolio"/>
-        <div className='flex flex-col items-center gap-2'>
+        <section className='flex flex-col items-center gap-2'>
           <p className='w-6/12 mb-2'>
             Cette page est la vitrine de mes réalisations et de mes compétences. J'ai développé tous 
             les projets présentés ici en autonomie, ils reflètent mon savoir-faire. Hormis le CV, 
@@ -27,7 +27,7 @@ function Portfolio() {
               />
             </article>
           ))}
-        </div>
+        </section>
     </main>
   );
 }

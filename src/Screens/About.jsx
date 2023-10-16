@@ -30,12 +30,12 @@ const About = () => {
           <p className='px-2'>
             Alors que j'avais une quinzaine d'années, mes parents ont acheté un ordinateur et j'ai
             découvert Internet. Nous étions au milieu des années 1990, ce n'était pas l'Internet que 
-            nous connaissons maintenant mais il était néanmoins déjà magique. Oui, même avec un
-            modem 56K.<br/>
+            nous connaissons maintenant mais il était néanmoins déjà magique.<br/>
+            Oui, même avec un modem 56K, il fallait simplement être un peu patient.<br/>
             <br/>
             J'ai commencé à démonter les unités centrales pour voir comment c'était dedans, pour 
             comprendre quel composant faisait quoi. Puis j'ai modifié mes configurations et j'ai fini 
-            par monter moi-même mes ordinateurs à partir de pièces détachées.<br/>
+            par monter moi-même mes ordinateurs à partir de pièces détachées quelques temps après.<br/>
             <br/>
             J'ai toujours cherché à programmer, que ce soit des mods pour DOOM en DECORATE ou des 
             scripts pour maintenir les serveurs que j'avais mis en place pour héberger services et 
@@ -70,6 +70,10 @@ const About = () => {
             </li>
             <li className='flex'>
               <ListArrow />
+              Le cinéma d'épouvante
+            </li>
+            <li className='flex'>
+              <ListArrow />
               La culture japonaise
             </li>
             <li className='flex'>
@@ -93,10 +97,13 @@ const About = () => {
           <h2 className='text-xl font-bold mb-6'>Me contacter</h2>
           <p className='mb-2 px-2'>
             Vous avez un projet à me soumettre ? Vous souhaitez me recruter ?<br/>
-            Contactez-moi par e-mail et rencontrons-mous pour en discuter.
+            Contactez-moi par e-mail et rencontrons-nous pour en discuter.
           </p>
           <div className='flex justify-center'>
-            <a href='mailto:admin@codeninja.fr' className='m-2 p-2 btn btn-lg btn-neutral-focus normal-case rounded-xl'>
+            <a
+              href='mailto:admin@codeninja.fr' 
+              className='m-2 p-2 btn btn-lg btn-neutral-focus normal-case rounded-xl'
+            >
               <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" style={{ fill: '#C7C7C7' }}>
                 <path d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376V479.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/>
               </svg>
