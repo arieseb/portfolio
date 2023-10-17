@@ -52,8 +52,25 @@ app.get('/data', (req, res) => {
 app.get('/tags', (req, res) => {
   db.query('SELECT * FROM article', (error, results) => {
     if (error) {
-      console.error('Erreur lors de la requête SELECT : ', error.message);
-      res.status(500).json({ error: 'Erreur lors de la requête SELECT.' });
+      console.error('Erreur lors de la requête des tags : ', error.message);
+      res.status(500).json({ error: 'Erreur lors de la requête des tags.' });
+    } else {
+      res.status(200).json(results);
+    }
+  });
+});
+
+// Endpoint GET pour filtrer les articles selon les tags
+app.get('/filter', (req, res) => {
+  const page = req.query.page || 1;
+  const limit = parseInt(req.query.limit) ||3;
+  const offset = (page - 1) * limit;
+  const tag = req.query.tag;
+  const filterQuery = 'SELECT * FROM article WHERE tag = ? LIMIT ? OFFSET ?';
+  db.query(filterQuery, [tag, limit, offset], (error, results) => {
+    if (error) {
+      console.error('Erreur lors du filtre des articles : ', error.message);
+      res.status(500).json({ error: 'Erreur lors du filtre des articles.' });
     } else {
       res.status(200).json(results);
     }

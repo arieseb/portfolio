@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
-import { twilight } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { twilight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 class MarkdownViewer extends React.Component {
   constructor(props) {
@@ -28,8 +28,8 @@ class MarkdownViewer extends React.Component {
         .catch(error => {
           console.error(error);
         });
-    }
-  }
+    };
+  };
 
   codeBlock = {
     code({ node, inline, className, children, ...props }) {
@@ -54,10 +54,15 @@ class MarkdownViewer extends React.Component {
   render() {
     return (
       <div>
-        <ReactMarkdown components={this.codeBlock}  className='mt-6'>{this.state.markdownContent}</ReactMarkdown>
+        <ReactMarkdown 
+          components={this.codeBlock}  
+          className='mt-6'
+        >
+          {this.state.markdownContent}
+        </ReactMarkdown>
       </div>
     );
-  }
+  };
 }
 
 export default MarkdownViewer;
