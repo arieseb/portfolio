@@ -21,7 +21,7 @@ const About = () => {
       <main className='mb-4'>
         <PageTitle title="À propos de moi"/>
         <section className='flex flex-col items-center gap-2'>
-          <article className='w-6/12 bg-base-300 rounded-xl p-6'>
+          <article className='lg:w-6/12 m-2 bg-base-300 rounded-xl p-6'>
             <h2 className='text-xl font-bold mb-6'>Qui suis-je ?</h2>
             <div className='flex'>
               <p className='px-2'>
@@ -36,10 +36,10 @@ const About = () => {
                 Par la suite, je me suis formé et j'ai obtenu le titre professionnel de développeur 
                 web et web mobile en septembre 2023.
               </p>
-              <img src={portrait} alt='Mon portrait' width='250' className='rounded-[50%]'/>
+              <img src={portrait} alt='Mon portrait' width='250' className='hidden xl:block w-64 max-h-64 rounded-[50%]'/>
             </div>
           </article>
-          <article className='w-6/12 bg-base-300 rounded-xl p-6'>
+          <article className='lg:w-6/12 m-2 bg-base-300 rounded-xl p-6'>
             <h2 className='text-xl font-bold mb-6'>Pourquoi suis-je devenu développeur ?</h2>
             <p className='px-2'>
               Alors que j'avais une quinzaine d'années, mes parents ont acheté un ordinateur et j'ai
@@ -59,7 +59,7 @@ const About = () => {
               je me suis tourné vers une formation de développeur web à l'issue de mon bilan de compétences.
             </p>
           </article>
-          <article className='w-6/12 bg-base-300 rounded-xl p-6'>
+          <article className='lg:w-6/12 m-2 bg-base-300 rounded-xl p-6'>
             <h2 className='text-xl font-bold mb-6'>Quelles sont mes passions ?</h2>
             <p className='mb-2 px-2'>
               Toujours à la recherche de nouvelles connaissances, je me suis découvert avec les années 
@@ -107,7 +107,7 @@ const About = () => {
               Cette liste n'est absolument pas exhaustive et sera sans aucun doute amenée à croître à l'avenir.
             </p>
           </article>
-          <article className='w-6/12 bg-base-300 rounded-xl p-6'>
+          <article className='lg:w-6/12 m-2 bg-base-300 rounded-xl p-6'>
             <h2 className='text-xl font-bold mb-6'>Me contacter</h2>
             <p className='mb-2 px-2'>
               Vous avez un projet à me soumettre ? Vous souhaitez me recruter ?<br/>

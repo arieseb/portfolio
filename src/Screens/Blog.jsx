@@ -26,7 +26,7 @@ function Blog() {
 
   const fetchData = useCallback(async () => {
     try {
-      const response = await axios.get(`http://localhost:3355/data?page=${currentPage}&limit=${articlesPerPage}`);
+      const response = await axios.get(`https://codeninja.fr/data?page=${currentPage}&limit=${articlesPerPage}`);
       setArticles(response.data);
     } catch (error) {
       console.error('Erreur lors de la récupération des articles', error);
@@ -40,7 +40,7 @@ function Blog() {
   useEffect(() => {
     async function fetchTags(){
       try {
-        const tagResponse = await axios.get('http://localhost:3355/tags');
+        const tagResponse = await axios.get('https://codeninja.fr/tags');
         setTags(tagResponse.data);
       } catch (error) {
         console.error('Erreur lors de la récupération des atags', error);
@@ -51,7 +51,7 @@ function Blog() {
 
   const filterData = useCallback(async () => {
     try {
-      const response = await axios.get(`http://localhost:3355/filter?tag=${filterTag}&page=${currentPage}&limit=${articlesPerPage}`);
+      const response = await axios.get(`https://codeninja.fr/filter?tag=${filterTag}&page=${currentPage}&limit=${articlesPerPage}`);
       setArticles(response.data);
     } catch (error) {
       console.error('Erreur lors de la récupération des articles filtrés', error);
@@ -74,7 +74,7 @@ function Blog() {
       <main>
         <PageTitle title="Bienvenue sur mon blog"/>
         <div className='flex justify-center mb-4'>
-          <p className='w-6/12'>
+          <p className='text-sm lg:text-base lg:w-6/12 m-2 '>
             Ce blog a pour but de partager mes découvertes, mes réflexions et tous types 
             d'élucubrations plus ou moins pertinentes ayant de près ou de loin un rapport avec
             le monde du développement web. Vous y trouverez des snippets, des méthodes, parfois du
@@ -84,7 +84,7 @@ function Blog() {
         </div>
         <div className='flex justify-center gap-8'>
           <Articles articles={articles}/>         
-          <aside className='bg-neutral-900 p-6 rounded-xl h-fit w-2/12'>
+          <aside className='hidden lg:flex bg-neutral-900 p-6 rounded-xl h-fit w-2/12'>
             <ul className='flex flex-col'>
               <li className='mb-2'>
                 <button onClick={unfilterData}>

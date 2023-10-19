@@ -5,13 +5,13 @@ const SiteCard = ({ siteTitle, imageName, description, siteLink, shownLink, stac
   const imagePath = images[imageName];
 
   return(
-    <div className='hero-content columns-2 lg:flex-row'>
-      <figure className='w-fit'>
-        <a href={siteLink} className=''>
-          <img src={imagePath} alt={siteTitle} className='rounded-2xl shadow-2xl h-fit'/>
+    <div className='hero-content columns-2 flex-col xl:flex-row'>
+      <figure className='w-fit px-6 xl:px-0'>
+        <a href={siteLink}>
+          <img src={imagePath} alt={siteTitle} className='rounded-xl shadow-2xl h-fit'/>
         </a>
       </figure>
-      <div className='ps-6 w-3/4'>
+      <div className='xl:ps-6 w-3/4'>
         <h2 className='text-xl font-bold'>{siteTitle}</h2>
         <p className='py-6'>{description}</p>
         <ul className='flex flex-wrap items-center mb-6'>

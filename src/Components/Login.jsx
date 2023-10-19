@@ -16,7 +16,7 @@ export default function Login(){
     }, [navigate, user])
 
     return (
-      <div>
+      <div className="hidden lg:block">
           <input type="text" value={email} placeholder="E-mail" id="email" name="email" autoComplete="email"
             className="input input-bordered input-sm w-full max-w-xs rounded-xl"
             onChange={(e) => setEmail(e.target.value)}

@@ -4,7 +4,7 @@ const Pagination = ({ currentPage, articleLength, onClickPrevious, onClickNext, 
       <button
         onClick={onClickPrevious} 
         disabled={currentPage === 1} 
-        className="btn btn-neutral mt-4 me-6 rounded-xl normal-case w-48"
+        className="btn btn-xs sm:btn-sm md:btn-md btn-neutral mt-4 me-2 lg:me-6 rounded-xl normal-case lg:w-48"
         aria-label="Page précédente"
       >
         Page précédente
@@ -13,7 +13,7 @@ const Pagination = ({ currentPage, articleLength, onClickPrevious, onClickNext, 
       <button 
         onClick={onClickNext} 
         disabled={articleLength < articlesPerPage} 
-        className="btn btn-neutral mt-4 ms-6 rounded-xl normal-case w-48"
+        className="btn btn-xs sm:btn-sm md:btn-md btn-neutral mt-4 ms-2 lg:ms-6 rounded-xl normal-case lg:w-48"
         aria-label="Page suivante"
       >
         Page suivante

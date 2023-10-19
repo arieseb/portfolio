@@ -26,7 +26,7 @@ const CreateForm = () => {
     data.append('file', formData.file);
 
     try {
-      const response = await axios.post('http://localhost:3355/create', data);
+      const response = await axios.post('https://codeninja.fr/create', data);
       setConfirmation('Le billet a bien été créé.')
       console.log('Réponse du serveur : ', response.data);
     } catch (error) {

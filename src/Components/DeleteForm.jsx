@@ -12,7 +12,7 @@ const DeleteForm = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3355/data');
+      const response = await axios.get('https://codeninja.fr/articles');
       setArticles(response.data);
     } catch (error) {
       console.error('Erreur lors de la récupération des articles', error);
@@ -26,7 +26,7 @@ const DeleteForm = () => {
     data.append('idToDelete', selectedId);
 
     try {
-      const response = await axios.post('http://localhost:3355/delete', data);
+      const response = await axios.post('https://codeninja.fr/delete', data);
       setConfirmation('Le billet a bien été supprimé.')
       console.log('Réponse du serveur : ', response.data);
       fetchData();

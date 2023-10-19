@@ -24,6 +24,7 @@ yarn-error.log*
 
 # firebase
 /src/firebase.js
+/src/databse.js
 
 # articles
 /public/Articles/

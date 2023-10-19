@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="bg-stone-700 h-24 w-full">
       <div className='flex items-center justify-center h-full'>
-        <button className="text-xl" onClick={scrollToTop}>
+        <button className=" text-base lg:text-xl" onClick={scrollToTop}>
           <FontAwesomeIcon icon={faArrowUp} className='me-2'/>
           <span>Retour en haut de page</span>
           <FontAwesomeIcon icon={faArrowUp} className='ms-2'/>
