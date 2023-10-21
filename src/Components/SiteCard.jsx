@@ -6,9 +6,9 @@ const SiteCard = ({ siteTitle, imageName, description, siteLink, shownLink, stac
 
   return(
     <div className='hero-content columns-2 flex-col xl:flex-row'>
-      <figure className='w-fit px-6 xl:px-0'>
+      <figure className='px-6 xl:px-0'>
         <a href={siteLink}>
-          <img src={imagePath} alt={siteTitle} className='rounded-xl shadow-2xl h-fit'/>
+          <img src={imagePath} alt={siteTitle} className='rounded-xl shadow-2xl aspect-[56.25%] md:aspect-[894/541]'/>
         </a>
       </figure>
       <div className='xl:ps-6 w-3/4'>
