@@ -46,7 +46,7 @@ class MarkdownViewer extends React.Component {
           </SyntaxHighlighter>
         </div>
       ) : (
-        <code className={className} {...props}>
+        <code className={'text-red-400 ' + className} {...props}>
           {children}
         </code>
       );

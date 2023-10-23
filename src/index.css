@@ -1,3 +1,18 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+a:not(.rounded-xl) {
+  color: #6faeff;
+  text-decoration: underline;
+}
+
+a:visited:not(.rounded-xl) {
+  color: #ae89da;
+  text-decoration: underline;
+}
+
+a:hover:not(.rounded-xl) {
+  color: #EF4444;
+  text-decoration: underline;
+}

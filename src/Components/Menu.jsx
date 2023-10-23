@@ -31,7 +31,7 @@ const Menu = () => {
           </li>
           { !user ?
             <li className="text-2xl disabled pointer-events-none">
-              <Link to="/admin" >Administration</Link>
+              <Link to="/admin" className="rounded-xl">Administration</Link>
             </li> :
             <li className="text-2xl">
             <Link to="/admin" className="rounded-xl">Administration</Link>
