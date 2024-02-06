@@ -118,6 +118,23 @@
             "Express",
             "MariaDB"
         ]
+      },
+      {
+        "id": 9,
+        "siteTitle": "La Pensine à Tatoués",
+        "imageName": "tattooScreen",
+        "description": "Le site vitrine d'un salon de tatouage troyen, avec une dimension e-commerce pour la réservation de modèles et la vente d'affiches et de cartes cadeau. Le site permet de prendre contact avec l'artiste par mail et lui transférer des fichiers pour illuster le projet.",
+        "siteLink": "#",
+        "shownLink": "www.la-pensine-a-tatoues.fr",
+        "stack": [
+            "HTML5",
+            "CSS3",
+            "TailwindCSS",
+            "daisyUI",
+            "JavaScript",
+            "PHP",
+            "MariaDB"
+        ]
       }
   ]
 }
