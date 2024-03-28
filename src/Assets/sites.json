@@ -136,6 +136,22 @@
             "PDO",
             "MariaDB"
         ]
+      },
+      {
+        "id": 10,
+        "siteTitle": "Riichi Mahjong",
+        "imageName": "mahjongScreen",
+        "description": "Une SPA statique expliquant les règles du mahjong japonais. L'occasion pour moi de m'essayer à Next.js et de m'amuser avec les animations en utilisant la biliothèque React Spring.",
+        "siteLink": "https://mahjong.codeninja.fr",
+        "shownLink": "mahjong.codeninja.fr",
+        "stack": [
+            "NextJS",
+            "React",
+            "CSS3",
+            "TailwindCSS",
+            "TypeScript",
+            "NodeJS"
+        ]
       }
   ]
 }

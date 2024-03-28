@@ -49,6 +49,7 @@ import alpinejsLogo from '../logos/alpinejs-logo.webp';
 import surrealdbLogo from '../logos/surrealdb-logo.webp';
 import qwikLogo from '../logos/qwik-logo.webp';
 import astroLogo from '../logos/astro-logo.webp';
+import nextjsLogo from '../logos/nextjs-logo.webp';
 
 const logos = {
   JavaScript: jsLogo,
@@ -103,7 +104,8 @@ const logos = {
   AlpineJS: alpinejsLogo,
   SurrealDB: surrealdbLogo,
   Qwik: qwikLogo,
-  Astro: astroLogo
+  Astro: astroLogo,
+  NextJS: nextjsLogo
 };
 
 export default logos;
