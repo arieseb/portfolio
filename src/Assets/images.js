@@ -7,7 +7,7 @@ import quaiAntiqueScreen from '../Assets/quai-antique_screen.png';
 import spyScreen from '../Assets/spy_screen.png';
 import folioScreen from '../Assets/folio_screen.png'
 import tattooScreen from '../Assets/tattoo_screen.png'
-import mahjongScreen from '../Assets/tattoo_screen.png'
+import mahjongScreen from '../Assets/mahjong_screen.png'
 
 const images = {
   cvScreen,
